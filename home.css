@@ -1,0 +1,68 @@
+html{overflow-y:hidden;}
+body{
+	background-image: radial-gradient(circle at top right, #fff, #aaa);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.header{
+	color: white;
+	font-family: "Times New Roman";
+}
+.form-reg{
+	position: absolute;
+	padding: 20px;
+	border-radius: 5px;
+}
+.lower-button{
+	position: relative;
+	top: 550px;
+	left: 50%;
+	width: 30%;
+	transform: translate(-50%);
+	padding-left:0px;
+	border-radius: 10px;
+}
+.middle{
+	
+}
+.box{
+	position:absolute;
+	width: 100%;
+}
+.front,.back{
+	margin: 5px;
+	overflow: hidden;
+	backface-visibility: hidden;
+	transition: transform .4s linear;
+}
+
+@media only screen and (max-width: 768px){ 
+	.back{
+		width:67%;
+		position:absolute;
+		transform: perspective(900px) rotateY(180deg);
+	}
+}
+
+@media only screen and (max-width: 992px){ 
+	.back{
+		width:50%;
+		position:absolute;
+		transform: perspective(900px) rotateY(180deg);
+	}
+}
+@media only screen and (min-width: 992px){ 
+	.back{
+		width:34%;
+		position:absolute;
+		transform: perspective(900px) rotateY(180deg);
+	}
+}
+.back{
+		position:absolute;
+		transform: perspective(900px) rotateY(180deg);
+	}
+.front{
+
+	transform: perspective(900px) rotateY(0deg);
+}
